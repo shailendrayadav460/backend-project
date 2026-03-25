@@ -10,8 +10,7 @@ exports.createCollection = async (req, res) => {
       subtitle,
       image: req.file ? req.file.filename : "",
     });
-
-    res.status(201).json(newItem);
+    res.status(201).json(newItem) ;
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
@@ -69,3 +68,4 @@ exports.deleteCollection = async (req, res) => {
     res.status(500).json({ message: error.message });
   }
 };
+
